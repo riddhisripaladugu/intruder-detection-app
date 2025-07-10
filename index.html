@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intruder Detection App</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Correct face-api.js version for browsers -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+  <!-- ✅ Your main logic -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>🔐 Intruder Detection Web App</h1>
+
+  <!-- 📷 Live webcam view -->
+  <video id="video" autoplay muted></video>
+
+  <!-- 👤 Buttons -->
+  <div class="buttons">
+    <button onclick="registerOwner()">👤 Register Owner</button>
+    <button onclick="scanFace()">🔎 Scan Face</button>
+  </div>
+
+  <!-- 🖼 Canvas for snapshot -->
+  <canvas id="canvas"></canvas>
+
+  <!-- 💬 Message area -->
+  <div id="message"></div>
+</body>
+</html>
